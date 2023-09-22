@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 carts = {}
 
-PRODUCT_SERVICE_URL = "http://productservice:5000" 
+PRODUCT_SERVICE_URL = "https://rest-groceries.onrender.com" 
 
 @app.route('/cart/<int:user_id>', methods=['GET'])
 def get_cart(user_id):
