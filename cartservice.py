@@ -1,13 +1,12 @@
-# cartservice.py
+
 from flask import Flask, request, jsonify
 import requests
 
 app = Flask(__name__)
 
-# Sample cart data (you can use a database for a more robust solution)
 carts = {}
 
-PRODUCT_SERVICE_URL = "http://productservice:5000"  # Assumes both services are in the same network
+PRODUCT_SERVICE_URL = "http://productservice:5000" 
 
 @app.route('/cart/<int:user_id>', methods=['GET'])
 def get_cart(user_id):

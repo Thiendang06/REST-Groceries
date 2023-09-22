@@ -1,9 +1,8 @@
-# productservice.py
+
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-# Sample product data (you can use SQLite for a more robust solution)
 products = [
     {"id": 1, "name": "Apples", "price": 1.0, "quantity": 100},
     {"id": 2, "name": "Bananas", "price": 0.5, "quantity": 150},
