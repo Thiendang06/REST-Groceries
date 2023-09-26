@@ -6,6 +6,30 @@ app = Flask(__name__)
 
 carts = {}
 
+carts[123] = [
+    {
+        "product_id": 1,
+        "name": "Apples",
+        "price": 1.0,
+        "quantity": 2,
+    },
+    {
+        "product_id": 2,
+        "name": "Bananas",
+        "price": 0.5,
+        "quantity": 3,
+    },
+]
+
+carts[456] = [
+    {
+        "product_id": 3,
+        "name": "Oranges",
+        "price": 1.2,
+        "quantity": 5,
+    }
+]
+
 PRODUCT_SERVICE_URL = "https://rest-product.onrender.com" 
 
 @app.route('/cart/<int:user_id>', methods=['GET'])
